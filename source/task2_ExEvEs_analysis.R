@@ -1,0 +1,10 @@
+# check if Rtools is correctly detected
+if (!requireNamespace("pkgbuild", quietly = TRUE)) install.packages("pkgbuild")
+pkgbuild::has_build_tools(debug = TRUE)
+install.packages(c("evapoRe", "twc"), repos = "https://cloud.r-project.org")
+library(evapoRe)
+library(twc)
+packageVersion("evapoRe")
+packageVersion("twc")
+browseVignettes("evapoRe")
+browseVignettes("twc")
